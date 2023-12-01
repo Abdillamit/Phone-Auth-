@@ -1,15 +1,14 @@
-import 'package:app/src/features/authentication/screens/page.dart' as MyAppPage;
 import 'package:flutter/material.dart';
 
-class Login extends StatelessWidget {
-  const Login({Key? key}) : super(key: key);
+class Page extends StatelessWidget {
+  const Page({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(brightness: Brightness.light),
       darkTheme: ThemeData(brightness: Brightness.dark),
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.system,
       home: Scaffold(
         body: Stack(
           children: [
@@ -42,13 +41,7 @@ class Login extends StatelessWidget {
                 const SizedBox(height: 24),
                 Center(
                   child: TextButton(
-                    onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) => MyAppPage.Page(),
-                        ),
-                      );
-                    },
+                    onPressed: () {},
                     style: TextButton.styleFrom(
                       foregroundColor: Colors.black,
                       backgroundColor: Color(0xFFACF709),
@@ -59,7 +52,7 @@ class Login extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                     ),
-                    child: const Text('Войти в аккаунт'),
+                    child: const Text('Войти в '),
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -78,7 +71,7 @@ class Login extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                     ),
-                    child: const Text('Регистрация'),
+                    child: const Text('qwerty'),
                   ),
                 ),
               ],
@@ -91,5 +84,5 @@ class Login extends StatelessWidget {
 }
 
 void main() {
-  runApp(const Login());
+  runApp(const Page());
 }
